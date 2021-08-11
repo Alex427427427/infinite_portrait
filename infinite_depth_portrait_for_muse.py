@@ -93,7 +93,7 @@ def the_muse_comes_to_him(screen):
 
 
 # global variables
-number_of_frames = 115 # set number of frames
+number_of_frames = 144 # set number of frames
 frame_count = 0 # global variable keeping track of where the animation praviously left off. 
 colour_selector = 0 
 colours = [7, 2, 6, 3, 7, 6, 3, 4, 3, 6, 3, 5, 7, 2, 3, 4, 7]

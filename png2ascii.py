@@ -41,7 +41,7 @@ def ascii_content(image, greyscale: str) -> list:
 
 
 # main
-frame_count = 115 # set number of frames
+frame_count = 144 # set number of frames
 image_names = []
 output_files = []
 # add all image names and filenames
