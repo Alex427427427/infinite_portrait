@@ -24,7 +24,7 @@ If it doesn't work try "python.exe" instead of "python"
 
 Now start a cmd from the directory containing infinite_depth_portrait_for_muse.py"
 and type 
-	pyinstaller -i icons\two.ico --onefile infinite_depth_portrait_for_muse.py
+	pyinstaller -i icons\[icon name].ico --onefile infinite_depth_portrait_for_muse.py
 
 NOTE: may need to add system environment path to include your roaming python scripts and libraries
 after installation of pyinstaller. May also need to pip install the 3 modules in step 2 again.)
