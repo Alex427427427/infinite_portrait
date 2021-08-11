@@ -2,6 +2,12 @@
 New and improved ascii animation 
 
 HOW TO RUN:
+	Double click .exe file.
+	No need to fullscreen, it's been taken care of.
+	In fact it's better to leave the size as it is.
+	Just reposition the window such that you can see the whole of it.
+
+HOW TO RUN WITHOUT USING .EXE:
 
 0. clone repo
 
