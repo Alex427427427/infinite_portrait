@@ -2,6 +2,7 @@
 New and improved ascii animation 
 
 HOW TO RUN:
+	clone repo, cd into repo
 	Double click .exe file.
 	No need to fullscreen, it's been taken care of.
 	In fact it's better to leave the size as it is.
