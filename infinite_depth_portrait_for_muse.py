@@ -11,10 +11,12 @@ Improvements:
 """
 from asciimatics.screen import Screen
 import time
-import vlc
 import os
 # set command line to be correct size on start up
 os.system("mode con cols=128 lines=64")
+from pygame import mixer
+
+mixer.init()
 
 """
 colour and attributes are defined as below
@@ -84,9 +86,10 @@ def the_muse_comes_to_him(screen):
         frame_count = (frame_count + 1) % number_of_frames # move to the next frame mod number_of_frames
 
         # restart music if mediaplayer is not playing
-        if not p.is_playing():
+        if not p.get_busy():
+            p.unload()
             song_selector = (song_selector + 1) % len(music_selection) # rotate music
-            p = vlc.MediaPlayer(music_selection[song_selector])
+            p.load(music_selection[song_selector])
             p.play()
             colour_selector = (colour_selector + 1) % len(colours)
 
@@ -96,27 +99,26 @@ def the_muse_comes_to_him(screen):
 number_of_frames = 144 # set number of frames
 frame_count = 0 # global variable keeping track of where the animation praviously left off. 
 colour_selector = 0 
-colours = [7, 2, 6, 3, 7, 6, 3, 4, 3, 6, 3, 5, 7, 2, 3, 4, 7]
+colours = [7, 2, 6, 3, 7, 3, 6, 4, 3, 6, 3, 5, 7, 2, 4, 7]
 song_selector = 0 
 music_selection = [
     
-    "music\\1_elo_twilight.mp3",
-    "music\\2_scarborough_fair.mp3",
-    "music\\3_princess_of_the_moon.mp3",
-    "music\\4_les_vacances_au_bord_de_la_mer.mp3",
-    "music\\5_mebius.mp3",
-    "music\\6_once_upon_a_memory.mp3",
-    "music\\7_soldiers_of_sorrow.mp3",
-    "music\\8_once_upon_a_memory_again.mp3",
-    "music\\9_launch.mp3",
-    "music\\10_aurora.mp3",
-    "music\\11_seven_return_to_nebula_m78.mp3",
-    "music\\12_shining_lalah.mp3",
-    "music\\13_two_shining_people.mp3",
-    "music\\14_beginning.mp3",
-    "music\\15_finding_paradise_time_is_a_place.mp3",
-    "music\\16_anya_by_the_stars.mp3",
-    "music\\17_mib_finale.mp3",
+    "music\\1_elo_twilight.wav",
+    "music\\2_scarborough_fair.wav",
+    "music\\3_princess_of_the_moon.wav",
+    "music\\4_les_vacances_au_bord_de_la_mer.wav",
+    "music\\5_mebius.wav",
+    "music\\6_soldiers_of_sorrow.wav",
+    "music\\7_once_upon_a_memory.wav",
+    "music\\8_once_upon_a_memory_again.wav",
+    "music\\9_launch.wav",
+    "music\\10_aurora.wav",
+    "music\\11_seven_return_to_nebula_m78.wav",
+    "music\\12_shining_lalah.wav",
+    "music\\13_two_shining_people.wav",
+    "music\\14_beginning.wav",
+    "music\\15_anya_by_the_stars.wav",
+    "music\\16_mib_finale.wav"
     
 ]
 
@@ -136,7 +138,8 @@ for name in file_names:
         frames.append(f.readlines())
 
 # load and play music
-p = vlc.MediaPlayer(music_selection[song_selector])
+p = mixer.music
+p.load(music_selection[song_selector])
 p.play()
 
 # construct screen and run the animation function

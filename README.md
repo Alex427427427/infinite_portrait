@@ -7,8 +7,12 @@ HOW TO RUN:
 	In fact it's better to leave the size as it is.
 	Just reposition the window such that you can see the whole of it.
 
+	If the screen is physically too small to see all 64 lines at the terminal, 
+	go into settings -> display -> and set scale to 100% instead of the default 150%)
+
 	(NOTE: some antivirus may autoprotect and remove the .exe file.
-		Search up how to whitelist a folder for your particular antivirus software.)
+		Search up how to whitelist a folder containg this repo,
+		 for your particular antivirus software.)
 
 HOW TO RUN WITHOUT USING .EXE:
 
