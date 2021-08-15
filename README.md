@@ -22,7 +22,7 @@ HOW TO RUN WITHOUT USING .EXE:
 
 1. Make sure you have python installed from their website
 
-2. Make sure you have pygame, pillow, and asciimatics installed.
+2. Make sure you have pygame, pillow, and asciimatics installed by entering the following as separate commands:
 
 		pip install pygame
 
@@ -37,14 +37,14 @@ If it doesn't work try "python.exe" instead of "python"
 		
 		python infinite_depth_portrait_for_muse.py
 
-(5. To turn into .exe, open cmd in admin mode, and type
+BONUS: To turn into .exe, open cmd in admin mode, and type
 	
-		pip install pyinstaller
+	pip install pyinstaller
 
 Now start a cmd from the directory containing infinite_depth_portrait_for_muse.py"
 and type 
 	
-		pyinstaller -i icons\[icon name].ico --onefile infinite_depth_portrait_for_muse.py
+	pyinstaller -i icons\[icon name].ico --onefile infinite_depth_portrait_for_muse.py
 
 NOTE: may need to add system environment path to include your roaming python scripts and libraries
 after installation of pyinstaller. May also need to pip install the 3 modules in step 2 again.)
