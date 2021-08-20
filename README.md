@@ -29,7 +29,7 @@ HOW TO RUN WITHOUT USING .EXE:
 
 1. Make sure you have python installed from their website
 
-2. Make sure you have pygame, pillow, and asciimatics installed by entering the following as separate commands:
+2. Make sure you have pygame, pillow, and asciimatics installed by entering the following as separate commands into the command prompt:
 
 		pip install pygame
 
