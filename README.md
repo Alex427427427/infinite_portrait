@@ -44,7 +44,7 @@ If it doesn't work try "python.exe" instead of "python"
 		
 		python infinite_depth_portrait_for_muse.py
 
-BONUS: To turn into .exe, open cmd in admin mode, and type
+BONUS: To turn the project into .exe yourself, open cmd in admin mode, and type
 	
 	pip install pyinstaller
 
