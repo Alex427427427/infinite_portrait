@@ -10,7 +10,7 @@ No need to fullscreen, it's been taken care of.
 In fact it's better to leave the size as it is.
 Just reposition the window such that you can see the whole of it.
 
-If the screen is physically too small to see all 64 lines at the terminal, 
+If your laptop screen is physically too small to see all 64 lines at the terminal, 
 	go into settings -> display -> and set scale to 100% instead of the default 150%)
 
 (NOTE: some antivirus may autoprotect and remove the .exe file.
@@ -29,7 +29,7 @@ HOW TO RUN WITHOUT USING .EXE:
 
 1. Make sure you have python installed from their website
 
-2. Make sure you have pygame, pillow, and asciimatics installed by entering the following as separate commands:
+2. Make sure you have pygame, pillow, and asciimatics installed by entering the following as separate commands into the command prompt:
 
 		pip install pygame
 
@@ -44,7 +44,7 @@ If it doesn't work try "python.exe" instead of "python"
 		
 		python infinite_depth_portrait_for_muse.py
 
-BONUS: To turn into .exe, open cmd in admin mode, and type
+BONUS: To turn the project into .exe yourself, open cmd in admin mode, and type
 	
 	pip install pyinstaller
 
