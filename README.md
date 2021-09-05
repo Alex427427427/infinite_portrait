@@ -3,7 +3,7 @@ New and improved ascii animation
 
 HOW TO RUN:
 	
-1. clone repo, cd into repo.
+1. clone repo, open folder of repo.
 2. Double click .exe file.
 
 No need to fullscreen, it's been taken care of.
@@ -37,24 +37,29 @@ HOW TO RUN WITHOUT USING .EXE:
 
 		pip install asciimatics
 
-3. In the termincal, CD to the directory containing "infinite_depth_portrait_for_muse.py"
+3. In the termincal, CD to the directory containing "infinite_portrait.py"
 
-4. Type "python infinite_depth_portrait_for_muse.py" and hit enter.
+4. Type "python infinite_portrait.py" and hit enter.
 If it doesn't work try "python.exe" instead of "python"
 		
-		python infinite_depth_portrait_for_muse.py
+		python infinite_portrait.py
 
 BONUS: To turn the project into .exe yourself, open cmd in admin mode, and type
 	
 	pip install pyinstaller
 
-Now start a cmd from the directory containing infinite_depth_portrait_for_muse.py"
+NOTE: may need to add system environment path to include your roaming python scripts and libraries
+after installation of pyinstaller. May also need to pip install the 3 modules in step 2 again.
+
+Now start a cmd from the directory containing infinite_portrait.py"
 and type 
 	
-	pyinstaller -i icons\[icon name].ico --onefile infinite_depth_portrait_for_muse.py
+	pyinstaller -i icons\infinite_portrait_bDs_icon.ico --onefile infinite_portrait.py
 
-NOTE: may need to add system environment path to include your roaming python scripts and libraries
-after installation of pyinstaller. May also need to pip install the 3 modules in step 2 again.)
+You can now delete the newly created pycache folder, the build folder.
+The .exe file will be found in the dist folder. Drag this into the main folder containing
+the infinite_portrait.py file, and delete the dist folder. This .exe file will be ready to run.
+Google up how to whitelist folders from your antivirus, as it will try to destroy the .exe file.
 
 
 
