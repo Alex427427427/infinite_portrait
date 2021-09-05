@@ -3,8 +3,12 @@ New and improved ascii animation
 
 HOW TO RUN:
 	
-1. clone repo, open folder of repo. (may take a while due to music files)
-2. Double click .exe file.
+1. clone repository to somewhere on your laptop, then open folder of repo. 
+	(may take a while due to music files
+	To clone a repository, copy the link, open a terminal at a desired folder and input: 
+		git clone [the link you copied]
+	)
+3. Double click .exe file.
 
 No need to fullscreen, it's been taken care of.
 In fact it's better to leave the size as it is.
