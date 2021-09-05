@@ -3,7 +3,7 @@ New and improved ascii animation
 
 HOW TO RUN:
 	
-1. clone repo, open folder of repo.
+1. clone repo, open folder of repo. (may take a while due to music files)
 2. Double click .exe file.
 
 No need to fullscreen, it's been taken care of.
