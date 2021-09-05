@@ -51,13 +51,14 @@ BONUS: To turn the project into .exe yourself, open cmd in admin mode, and type
 NOTE: may need to add system environment path to include your roaming python scripts and libraries
 after installation of pyinstaller. May also need to pip install the 3 modules in step 2 again.
 
-Now start a cmd from the directory containing infinite_portrait.py"
+Now start a cmd from the directory containing "infinite_portrait.py"
 and type 
 	
 	pyinstaller -i icons\infinite_portrait_bDs_icon.ico --onefile infinite_portrait.py
 
-You can now delete the newly created pycache folder, the build folder.
-The .exe file will be found in the dist folder. Drag this into the main folder containing
+You can now delete the newly created pycache folder, and the build folder.
+You can also delete the .spec file, which only is needed for when you first create that .exe.
+The .exe file will be found in the dist folder. Drag this file into the main folder containing
 the infinite_portrait.py file, and delete the dist folder. This .exe file will be ready to run.
 Google up how to whitelist folders from your antivirus, as it will try to destroy the .exe file.
 
