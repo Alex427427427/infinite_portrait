@@ -20,7 +20,7 @@ If your laptop screen is physically too small to see all 64 lines at the termina
 (NOTE: if on linux, the OS actually performs the computations efficiently enough
 	to accurately reflect the set time.sleep. My current time.sleep is
 	adjusted for Windows running speed. You may adjust it as you see fit.
-	The code can be found in infinite_depth_portrait_for_muse.py.
+	The code can be found in infinite_portrait.py.
 	As a rule of thumb, linux will be faster than windows by a lot so to
 	achieve the same framerate, time.sleep should be set higher on linux than on windows.)
 	
