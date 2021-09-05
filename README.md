@@ -4,7 +4,7 @@ New and improved ascii animation
 HOW TO RUN:
 	
 1. clone repository to somewhere on your laptop, then open folder of repo. 
-	(may take a while due to music files
+	(may take a while due to music files.
 	To clone a repository, copy the link, open a terminal at a desired folder and input: 
 		git clone [the link you copied]
 	)
