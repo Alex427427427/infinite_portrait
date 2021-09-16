@@ -7,31 +7,18 @@ Improvements:
     allows music selection
     colours
     better art
-
 """
 from asciimatics.screen import Screen
 import time
-
-
-import termios
-import struct
-import fcntl
-
-def set_winsize(fd, row, col, xpix=0, ypix=0):
-    winsize = struct.pack("HHHH", row, col, xpix, ypix)
-    fcntl.ioctl(fd, termios.TIOCSWINSZ, winsize)
-
-import sys
-sys.stdout.write("\x1b[8;{rows};{cols}t".format(rows=64, cols=128))
-
-
+import os
+# set command line to be correct size on start up
+os.system("mode con cols=128 lines=64")
 from pygame import mixer
 
 mixer.init()
 
 """
 colour and attributes are defined as below
-
 COLOUR_BLACK = 0
 COLOUR_RED = 1
 COLOUR_GREEN = 2
@@ -40,16 +27,13 @@ COLOUR_BLUE = 4
 COLOUR_MAGENTA = 5
 COLOUR_CYAN = 6
 COLOUR_WHITE = 7
-
 A_BOLD = 1
 A_NORMAL = 2
 A_REVERSE = 3
 A_UNDERLINE = 4
-
 code format:
 screen.print_at(text, x, y, colour=7, attr=0, bg=0, transparent=False)
 directly prints a line of ascii
-
 screen.clear_buffer(fg, attr, bg)
 This is the superior way to clear screen. 
 Normal cls clears the whole screen immediately before the next frame loads.
@@ -114,34 +98,34 @@ colours = [7, 2, 3, 6,   3, 2, 7, 3,   5,   6, 3, 4, 3,    7,    6, 3, 2,   4, 7
 song_selector = 0 
 music_selection = [
     
-    "music/1_elo_twilight.wav",
-    "music/2_scarborough_fair.wav",
-    "music/All_lovers_under_the_sky.wav",
-    "music/3_princess_of_the_moon.wav",
+    "music\\1_elo_twilight.wav",
+    "music\\2_scarborough_fair.wav",
+    "music\\All_lovers_under_the_sky.wav",
+    "music\\3_princess_of_the_moon.wav",
 
-    "music/4_les_vacances_au_bord_de_la_mer.wav",
-    "music/Eight_Melodies.wav",
-    "music/5_mebius.wav",
-    "music/6_soldiers_of_sorrow.wav",
+    "music\\4_les_vacances_au_bord_de_la_mer.wav",
+    "music\\Eight_Melodies.wav",
+    "music\\5_mebius.wav",
+    "music\\6_soldiers_of_sorrow.wav",
 
-    "music/Le Festin Camille.wav",
+    "music\\Le Festin Camille.wav",
 
-    "music/7_once_upon_a_memory.wav",
-    "music/L3_sea_of_the_stars.wav",
-    "music/8_once_upon_a_memory_again.wav",
-    "music/9_launch.wav",
+    "music\\7_once_upon_a_memory.wav",
+    "music\\L3_sea_of_the_stars.wav",
+    "music\\8_once_upon_a_memory_again.wav",
+    "music\\9_launch.wav",
 
-    "music/Still_Alive.wav",
+    "music\\Still_Alive.wav",
 
-    "music/10_aurora.wav",
-    "music/11_seven_return_to_nebula_m78.wav",
-    "music/Kaiba_Never.wav",
+    "music\\10_aurora.wav",
+    "music\\11_seven_return_to_nebula_m78.wav",
+    "music\\Kaiba_Never.wav",
     
-    "music/15_anya_by_the_stars.wav",
-    "music/13_two_shining_people.wav",
-    "music/14_beginning.wav",
+    "music\\15_anya_by_the_stars.wav",
+    "music\\13_two_shining_people.wav",
+    "music\\14_beginning.wav",
 
-    "music/16_mib_finale.wav"
+    "music\\16_mib_finale.wav"
     
 ]
 
@@ -151,7 +135,7 @@ frames = [] # this will contain a list, each element is a frame. Each frame is a
 
 # add all filenames
 for i in range(number_of_frames):
-    file_names.append("ascii_frames/AI" + str(i + 1) + ".txt")
+    file_names.append("ascii_frames\\AI" + str(i + 1) + ".txt")
 
 
 # for each filename
@@ -171,6 +155,3 @@ while True:
 
 
     
-
-
-
