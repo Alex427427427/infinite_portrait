@@ -1,4 +1,4 @@
-# asciimatics_the_muse
+# infinite-portrait
 New and improved ascii animation 
 
 HOW TO RUN:
