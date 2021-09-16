@@ -3,7 +3,7 @@ New and improved ascii animation
 
 HOW TO RUN:
 	
-1. clone repository to somewhere on your laptop, then open folder of repo. 
+1. clone repository to somewhere on your laptop, then open folder of repo. If on linux, clone the LINUX BRANCH!!
 	(may take a while due to music files.
 	To clone a repository, copy the link, open a terminal at a desired folder and input: 
 		git clone [the link you copied]
