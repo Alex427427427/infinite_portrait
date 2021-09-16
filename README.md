@@ -8,7 +8,7 @@ HOW TO RUN:
 	To clone a repository, copy the link, open a terminal at a desired folder and input: 
 		git clone [the link you copied]
 	)
-3. Double click .exe file.
+2. If on Windows, double click .exe file.
 
 No need to fullscreen, it's been taken care of.
 In fact it's better to leave the size as it is.
@@ -21,7 +21,11 @@ If your laptop screen is physically too small to see all 64 lines at the termina
 		Search up how to whitelist a folder containg this repo,
 		 for your particular antivirus software.)
 
-(NOTE: if on linux, the OS actually performs the computations efficiently enough
+(NOTE: 
+	If on linux, use the code on the linux branch. 
+	A few changes to the code were required, including the code to automatically resize window, 
+	the double back slashes turned into forward slashes.
+	if on linux, the OS actually performs the computations efficiently enough
 	to accurately reflect the set time.sleep. My current time.sleep is
 	adjusted for Windows running speed. You may adjust it as you see fit.
 	The code can be found in infinite_portrait.py.
@@ -29,9 +33,9 @@ If your laptop screen is physically too small to see all 64 lines at the termina
 	achieve the same framerate, time.sleep should be set higher on linux than on windows.)
 	
 
-HOW TO RUN WITHOUT USING .EXE:
+HOW TO RUN WITHOUT USING .EXE (must be this way for linux):
 
-1. Make sure you have python installed from their website
+1. Make sure you have python3 installed
 
 2. Make sure you have pygame, pillow, and asciimatics installed by entering the following as separate commands into the command prompt:
 
@@ -40,14 +44,22 @@ HOW TO RUN WITHOUT USING .EXE:
 		pip install pillow
 
 		pip install asciimatics
+		
+	If on linux, the command become as follows:
+	
+		sudo pip3 install pygame
+		
+		sudo pip3 install pillow
+		
+		sudo pip3 install asciimatics
 
 3. In the termincal, CD to the directory containing "infinite_portrait.py"
 
 4. Type "python infinite_portrait.py" and hit enter.
-If it doesn't work try "python.exe" instead of "python"
+If it doesn't work try "python.exe" instead of "python", or "python3"
 		
-		python infinite_portrait.py
-
+		python3 infinite_portrait.py
+		
 BONUS: To turn the project into .exe yourself, open cmd in admin mode, and type
 	
 	pip install pyinstaller
