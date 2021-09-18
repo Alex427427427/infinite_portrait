@@ -12,7 +12,7 @@ Improvements:
 from asciimatics.screen import Screen
 import time
 
-
+# set terminal window size in linux
 import termios
 import struct
 import fcntl
@@ -24,9 +24,8 @@ def set_winsize(fd, row, col, xpix=0, ypix=0):
 import sys
 sys.stdout.write("\x1b[8;{rows};{cols}t".format(rows=64, cols=128))
 
-
+# for music
 from pygame import mixer
-
 mixer.init()
 
 """
