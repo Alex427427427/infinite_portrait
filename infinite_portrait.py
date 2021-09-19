@@ -3,9 +3,7 @@ Created on 11/8/2021, by Alexander Li
 Lightweight version, no music, no colour change.
 
 """
-from asciimatics.screen import Screen
 import time
-
 import os
 os.system("clear")
 
@@ -13,13 +11,11 @@ os.system("clear")
 import termios
 import struct
 import fcntl
-
 def set_winsize(fd, row, col, xpix=0, ypix=0):
     winsize = struct.pack("HHHH", row, col, xpix, ypix)
     fcntl.ioctl(fd, termios.TIOCSWINSZ, winsize)
-
 import sys
-sys.stdout.write("\x1b[8;{rows};{cols}t".format(rows=64, cols=128))
+sys.stdout.write("\x1b[8;{rows};{cols}t".format(rows=65, cols=128))
 
 
 
