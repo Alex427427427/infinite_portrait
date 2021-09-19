@@ -55,9 +55,6 @@ def the_muse_comes_to_him(screen):
     screen.clear() # the screen should be clean at the start
 
     global frame_count 
-    global song_selector
-    global colour_selector
-    global p
 
     while True:
         if screen.has_resized():
@@ -70,7 +67,7 @@ def the_muse_comes_to_him(screen):
         frame = frames[frame_count] # pick out next frame
         # load text line by line into a BUFFER
         for l in range(0, len(frame)):
-            screen.print_at(frame[l], 0, l, colours[colour_selector], 0, 0) 
+            screen.print_at(frame[l], 0, l, 7, 0, 0) 
         
         screen.refresh() # load buffer on screen
 
@@ -80,55 +77,12 @@ def the_muse_comes_to_him(screen):
 
         frame_count = (frame_count + 1) % number_of_frames # move to the next frame mod number_of_frames
 
-        # restart music if mediaplayer is not playing
-        if not p.get_busy():
-            p.unload()
-            song_selector = (song_selector + 1) % len(music_selection) # rotate music
-            p.load(music_selection[song_selector])
-            p.play()
-            colour_selector = (colour_selector + 1) % len(colours)
 
 
 
 # global variables
 number_of_frames = 144 # set number of frames
 frame_count = 0 # global variable keeping track of where the animation praviously left off. 
-colour_selector = 0 
-colours = [7, 2, 3, 6,   3, 2, 7, 3,   5,   6, 3, 4, 3,    7,    6, 3, 2,   4, 7, 2,   7]
-song_selector = 0 
-music_selection = [
-    
-    "music\\1_elo_twilight.wav",
-    "music\\2_scarborough_fair.wav",
-    "music\\All_lovers_under_the_sky.wav",
-    "music\\3_princess_of_the_moon.wav",
-
-    "music\\4_les_vacances_au_bord_de_la_mer.wav",
-    "music\\Eight_Melodies.wav",
-    "music\\5_mebius.wav",
-    "music\\6_soldiers_of_sorrow.wav",
-
-    "music\\Le Festin Camille.wav",
-
-    "music\\7_once_upon_a_memory.wav",
-    "music\\L3_sea_of_the_stars.wav",
-    "music\\8_once_upon_a_memory_again.wav",
-    "music\\9_launch.wav",
-
-    "music\\Still_Alive.wav",
-
-    "music\\10_aurora.wav",
-    "music\\11_seven_return_to_nebula_m78.wav",
-    "music\\Kaiba_Never.wav",
-    
-    "music\\15_anya_by_the_stars.wav",
-    "music\\13_two_shining_people.wav",
-    "music\\14_beginning.wav",
-
-    "music\\16_mib_finale.wav"
-    
-]
-
 
 file_names = [] # list of files we will use to create the animation
 frames = [] # this will contain a list, each element is a frame. Each frame is a LIST of lines
@@ -143,11 +97,6 @@ for name in file_names:
     # open the files and read lines. 
     with open(name, "r", encoding="utf8") as f:
         frames.append(f.readlines())
-
-# load and play music
-p = mixer.music
-p.load(music_selection[song_selector])
-p.play()
 
 # construct screen and run the animation function
 while True:
