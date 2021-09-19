@@ -46,8 +46,8 @@ image_names = []
 output_files = []
 # add all image names and filenames
 for i in range(frame_count):
-    image_names.append("png_frames\\AI" + str(i + 1) + ".png") # ["AI1.png", "AI2.png", ... ]
-    output_files.append("ascii_frames\\AI" + str(i + 1) + ".txt") # ["AI1.txt", "AI2.txt", ... ]
+    image_names.append("png_frames/AI" + str(i + 1) + ".png") # ["AI1.png", "AI2.png", ... ]
+    output_files.append("ascii_frames/AI" + str(i + 1) + ".txt") # ["AI1.txt", "AI2.txt", ... ]
 
 # for every image...
 for i in range(len(image_names)):
